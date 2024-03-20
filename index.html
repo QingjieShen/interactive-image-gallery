@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Image Gallery</title>
+</head>
+<body>
+    <div class="home-page" id="home-page">
+        <div class="banner">
+            <img src="images/banner.jpg" alt="photo of Clark">
+            <div class="banner-text">
+                <h1>Visual Stories</h1>
+                <p>Exploring the World Through Photography</p>
+            </div>
+        </div>
+        <a href="#image-sets"><div class="action">
+            <p>Uncover the framing moments</p>
+            <p><i class="fa-solid fa-chevron-down"></i></p>
+        </div></a>
+        <div class="image-sets" id="image-sets">
+            <div class="image-gallery" id="jeep-car-set">
+                <img src="images/hds/used_cars/used_car_1-1800_x_1199.jpg" alt="photo of a used Jeep Wrangler">
+                <div class="description">
+                    <h3>Used Car Inventory</h3>
+                    <p>Discover this Jeep Wrangler's character...</p>
+                </div>
+            </div>
+            <div class="image-gallery" id="britannia-beach-set">
+                <img src="images/hds/scenery/britannia_bay_3-1800_x_1199.jpg" alt="Britannia Bay, Ottawa">
+                <div class="description">
+                    <h3>Britannia Bay, Ottawa</h3>
+                    <p>The serene and picturesque location is one of my favorite places...</p>
+                </div>
+            </div>
+            <div class="image-gallery" id="canada-day-set">
+                <img src="images/hds/event/canada_day_8-1800_x_1200.jpg" alt="photo of Candian walking in front of the Parliament Hill">
+                <div class="description">
+                    <h3>Canada Day 2023</h3>
+                    <p>Celebrate Unity in Diversity</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="used-car-page invisible" id="used-car-page">
+        <button class="return-btn" id="car-return"><i class="fa-solid fa-xmark"></i></button>
+        <h1>Used Car Inventory</h1>
+        <p>Discover this Jeep Wrangler's character in every angle and the story behind every detail.</p>
+        <div id="jeep-car-gallery">
+            
+        </div>
+    </div>
+    <div class="event-page invisible" id="event-page">
+        <button class="return-btn" id="event-return"><i class="fa-solid fa-xmark"></i></button>
+        <h1>Canada Day 2023</h1>
+        <p>Celebrate Unity in Diversity</p>
+        <div id="canada-day-gallery">
+            
+        </div>
+    </div>
+    <div class="britannia-beach-page invisible" id="britannia-beach-page">
+        <button class="return-btn" id="britannia-return"><i class="fa-solid fa-xmark"></i></button>
+        <h1>Britannia Bay</h1>
+        <p>The serene and picturesque location is one of my favorite places to capture the beauty of nature and showcase the art of photography</p>
+        <div id="britannia-gallery">
+            
+        </div>
+    </div>
+
+    <footer>
+        <p>Created by Qingjie (Clark) Shen</p>
+    </footer>
+    
+    <script src="main.js"></script>
+    <script src="https://kit.fontawesome.com/342db6fee9.js" crossorigin="anonymous"></script>
+</body>
+</html>

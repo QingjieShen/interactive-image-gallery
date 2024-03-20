@@ -1,0 +1,339 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.invisible {
+    display: none !important;
+}
+
+/* float animation */
+@keyframes float {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-10px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
+}
+
+/* modal image zoom animation */
+@keyframes zoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+}
+
+/* styles home page */
+.home-page {
+    /* background:linear-gradient(rgb(246, 233, 209),rgb(241, 210, 157)) ; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.banner {
+    position: relative;
+    width: 100%;
+
+}
+.banner > img {
+    height: 80vh;
+    position: relative;
+    left: -500px;
+    opacity: 0.7;
+    filter: blur(1px);
+    margin-bottom: 1rem;
+}
+
+.banner-text {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(255, 255, 255);
+    text-shadow: 1px 1px 10px rgb(14, 14, 14);
+}
+
+.banner-text > h1 {
+    font-size: 2.8rem;
+    letter-spacing: 8px;
+    margin-bottom: 0.8rem;
+    line-height: 1;
+    font-variant-caps: all-petite-caps;
+}
+
+.banner-text > p {
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+}
+
+.home-page a:link {
+    text-decoration: none;
+}
+
+.action {
+    text-align: center;
+    margin-bottom: 1rem;
+    transform: translatey(0px);
+	animation: float 4s ease-in-out infinite;
+    color: rgb(102, 102, 102);
+}
+
+.action:hover {
+    cursor: pointer;
+}
+
+.action p {
+    margin-bottom: 0.3rem;
+    font-size: 1.2rem;
+}
+
+.action p:nth-child(2) {
+    font-size: 1.5rem;
+}
+
+/* styles the image sets */
+.image-sets {
+    padding: 1rem;
+    max-width: 1200px;
+}
+
+.image-gallery {
+    margin-bottom: 0.5rem;
+    position: relative;
+}
+
+.image-gallery > img {
+    width: 100%;
+    transition: .5s ease;
+    box-shadow: 0px 2px 8px black;
+}
+
+.image-gallery:hover > img {
+    opacity: 0.3;
+    cursor: pointer;
+}
+
+.description {
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: .5s ease;
+    text-shadow: 1px 0 1px rgb(216, 216, 216);
+    cursor: pointer;
+    width: 90%;
+}
+
+.description > h3 {
+    font-size: 1.6rem;
+}
+
+.description > p {
+    font-size: 1.2rem;
+}
+
+.image-gallery:hover > .description {
+    opacity: 1;
+    
+}
+
+/* styles the image gallery pages */
+.used-car-page, .event-page, .britannia-beach-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.used-car-page > h1, .event-page > h1, .britannia-beach-page > h1 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.used-car-page > p, .event-page > p, .britannia-beach-page > p {
+    margin-bottom: 2rem;
+}
+
+.return-btn, .modal-close {
+    position: absolute;
+    top: 0.8rem;
+    right: 0.8rem;
+    font-size: 2.5rem;
+    padding: 10px 20px;
+    background: none;
+    border: none;
+    transition: .3s;
+}
+
+.return-btn:hover {
+    cursor: pointer;
+    background-color: rgba(184, 184, 184, 0.584);
+    border-radius: 50%;
+}
+
+#jeep-car-gallery, #canada-day-gallery, #britannia-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    padding: 0 1rem;
+}
+
+.img-container {
+    width: 100%;
+    height: 100%;
+}
+
+#jeep-car-gallery > div > img, #canada-day-gallery > div > img, #britannia-gallery > div > img {
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 0 1px 5px rgb(18, 18, 18);
+}
+
+#jeep-car-gallery > div > img:hover, #canada-day-gallery > div > img:hover, #britannia-gallery > div > img:hover {
+    box-shadow: 5px 5px 10px rgb(150, 150, 150);
+    transform: translatey(-5px) scale(1.04);
+    transition: .3s ease;
+}
+
+/* styles the modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+}
+
+.modal p {
+    position: relative;
+    top: 10%;
+    margin-top: 1rem;
+    animation: zoom .5s ease-in-out;
+}
+
+.modal-img.vertical {
+    position: relative;
+    margin-top: auto;
+    top: 10%;
+    height: min(60%, 800px);
+    max-width: 100%;
+    animation: zoom .5s ease-in-out;
+}
+
+.modal-img.horizontal {
+    position: relative;
+    margin-top: auto;
+    top: 10%;
+    width: min(100%, 1050px);
+    animation: zoom .5s ease-in-out;
+}
+
+.modal-img:hover {
+    cursor: pointer;
+}
+
+footer {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    color: rgb(27, 27, 27);
+}
+
+@media only screen and (min-width: 576px) {
+    .banner-text > h1 {
+        font-size: 4rem;
+        letter-spacing: 10px;
+        line-height: 4rem;
+    }
+    
+    .banner-text > p {
+        font-size: 1.5rem;
+    }
+
+    .banner > img {
+        left: -400px;
+    }
+
+    .modal-img.vertical {
+        height: min(80%, 800px);
+    }
+}
+
+
+@media only screen and (min-width: 768px) {
+    .banner > img {
+        /* width: 100%; */
+        /* height: auto; */
+        left: 0;
+    }
+    
+    .banner-text > h1 {
+        font-size: 4rem;
+        letter-spacing: 10px;
+    }
+    
+    .banner-text > p {
+        font-size: 1.5rem;
+    }
+
+
+    .image-sets {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    #jeep-car-gallery, #canada-day-gallery, #britannia-gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .banner-text > h1 {
+        font-size: 5rem;
+        letter-spacing: 20px;
+    }
+    
+    .banner-text > p {
+        font-size: 2rem;
+        margin-top: 1.5rem;
+    }
+
+    .image-sets {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    #jeep-car-gallery, #canada-day-gallery, #britannia-gallery {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media only screen and (min-width: 1370px) {
+    .banner > img {
+        width: 100%;
+        height: auto;
+        left: 0;
+    }
+}

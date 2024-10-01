@@ -153,7 +153,7 @@ body {
 }
 
 /* styles the image gallery pages */
-.used-car-page, .event-page, .britannia-beach-page {
+.used-car-page, .event-page, .britannia-beach-page, .chev-car-page, .audi-car-page {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -161,12 +161,12 @@ body {
     position: relative;
 }
 
-.used-car-page > h1, .event-page > h1, .britannia-beach-page > h1 {
+.used-car-page > h1, .event-page > h1, .britannia-beach-page > h1, .chev-car-page > h1, .audi-car-page > h1{
     margin-top: 2rem;
     margin-bottom: 1rem;
 }
 
-.used-car-page > p, .event-page > p, .britannia-beach-page > p {
+.used-car-page > p, .event-page > p, .britannia-beach-page > p, .chev-car-page > p, .audi-car-page > p {
     margin-bottom: 2rem;
 }
 
@@ -187,7 +187,7 @@ body {
     border-radius: 50%;
 }
 
-#jeep-car-gallery, #canada-day-gallery, #britannia-gallery {
+#jeep-car-gallery, #canada-day-gallery, #britannia-gallery, #chev-car-gallery, #audi-car-gallery {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
@@ -199,13 +199,13 @@ body {
     height: 100%;
 }
 
-#jeep-car-gallery > div > img, #canada-day-gallery > div > img, #britannia-gallery > div > img {
+#jeep-car-gallery > div > img, #canada-day-gallery > div > img, #britannia-gallery > div > img, #chev-car-gallery > div > img, #audi-car-gallery > div > img {
     width: 100%;
     border-radius: 5px;
     box-shadow: 0 1px 5px rgb(18, 18, 18);
 }
 
-#jeep-car-gallery > div > img:hover, #canada-day-gallery > div > img:hover, #britannia-gallery > div > img:hover {
+#jeep-car-gallery > div > img:hover, #canada-day-gallery > div > img:hover, #britannia-gallery > div > img:hover, #chev-car-gallery > div > img:hover, #audi-car-gallery > div > img:hover {
     box-shadow: 5px 5px 10px rgb(150, 150, 150);
     transform: translatey(-5px) scale(1.04);
     transition: .3s ease;
@@ -305,7 +305,7 @@ footer {
         gap: 1rem;
     }
 
-    #jeep-car-gallery, #canada-day-gallery, #britannia-gallery {
+    #jeep-car-gallery, #canada-day-gallery, #britannia-gallery, #chev-car-gallery, #audi-car-gallery {
         grid-template-columns: repeat(3, 1fr);
     }
 }
@@ -325,7 +325,7 @@ footer {
         grid-template-columns: repeat(3, 1fr);
     }
 
-    #jeep-car-gallery, #canada-day-gallery, #britannia-gallery {
+    #jeep-car-gallery, #canada-day-gallery, #britannia-gallery, #chev-car-gallery, #audi-car-gallery {
         grid-template-columns: repeat(4, 1fr);
     }
 }
